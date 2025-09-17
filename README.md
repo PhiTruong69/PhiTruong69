@@ -15,4 +15,7 @@ Student at HCMUT
 [![](https://visitcount.itsvg.in/api?id=PhiTruong69&icon=0&color=0)](https://visitcount.itsvg.in)
 ![Breakout Game](output/dark.svg)
 
-<sub>*Built with cyprieng/github-breakout*</sub>
+<p align="center">
+  <sub><em>Built with <a href="https://github.com/cyprieng/github-breakout">cyprieng/github-breakout</a></em></sub>
+</p>
+
