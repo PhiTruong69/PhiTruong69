@@ -1,25 +1,25 @@
-name: breakout 
+name: Breakout Game
 
 on:
   schedule:
-    - cron: "0 0 * * *"   # chạy tự động mỗi ngày (00:00 UTC)
-  workflow_dispatch:       # cho phép bấm nút "Run workflow" để chạy thủ công
-    # cho phép chạy thủ công
+    - cron: "0 0 * * *"   # chạy tự động mỗi ngày lúc 00:00 UTC
+  workflow_dispatch:       # cho phép chạy thủ công từ tab Actions
 
 jobs:
   breakout:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout repo
         uses: actions/checkout@v3
 
-      - name: Generate breakout game
+      - name: Generate breakout game from GitHub contribution graph
         uses: cyprieng/github-breakout@v1.2.1
 
-      - name: Commit and push changes
+      - name: Commit changes
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add .
-          git commit -m "Update Breakout game" || echo "No changes to commit"
+          git add README.md
+          git commit -m "Update breakout game from contribution graph" || echo "No changes to commit"
           git push
