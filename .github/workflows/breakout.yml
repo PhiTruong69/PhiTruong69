@@ -15,6 +15,9 @@ jobs:
 
       - name: Generate breakout game from GitHub contribution graph
         uses: cyprieng/github-breakout@v1.2.1
+        with:
+          github_username: PhiTruong69
+          github_token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Commit changes
         run: |
