@@ -1,4 +1,4 @@
-name: Breakout Game
+name: breakout 
 
 on:
   schedule:
