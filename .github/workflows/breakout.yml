@@ -2,8 +2,9 @@ name: Breakout Game
 
 on:
   schedule:
-    - cron: "0 0 * * *"   # chạy mỗi ngày (00:00 UTC)
-  workflow_dispatch:       # cho phép chạy thủ công
+    - cron: "0 0 * * *"   # chạy tự động mỗi ngày (00:00 UTC)
+  workflow_dispatch:       # cho phép bấm nút "Run workflow" để chạy thủ công
+    # cho phép chạy thủ công
 
 jobs:
   breakout:
