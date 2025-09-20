@@ -1,6 +1,4 @@
-# 💫About Me :
-Student at HCMUT 
-
+# Hi, I'm Trường.
 ## 🌐Socials
 [![Facebook](https://img.shields.io/badge/Facebook-%231877F2.svg?logo=Facebook&logoColor=white)](https://facebook.com/phi.truong.069) [![Instagram](https://img.shields.io/badge/Instagram-%23E4405F.svg?logo=Instagram&logoColor=white)](https://instagram.com/truo_gcon) 
 
