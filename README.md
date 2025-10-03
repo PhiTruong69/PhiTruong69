@@ -19,8 +19,11 @@
 ---
 
 <!-- breakout-start -->
+<p align="center">
+  <img src="https://raw.githubusercontent.com/PhiTruong69/PhiTruong69/github-breakout/images/breakout-light.svg#gh-light-mode-only" alt="Breakout Game"/>
+  <img src="https://raw.githubusercontent.com/PhiTruong69/PhiTruong69/github-breakout/images/breakout-dark.svg#gh-dark-mode-only" alt="Breakout Game"/>
+</p>
 <!-- breakout-end -->
-
 <p align="center">
   <sub><em>Built with <a href="https://github.com/cyprieng/github-breakout">cyprieng/github-breakout</a></em></sub>
 </p>
