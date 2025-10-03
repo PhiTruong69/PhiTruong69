@@ -2,7 +2,7 @@ name: generate breakout svg
 
 on:
   schedule:
-    - cron: "0 */24 * * *"
+    - cron: "0 0 * * *"   # chạy 0h UTC mỗi ngày
   workflow_dispatch:
 
 jobs:
@@ -16,8 +16,8 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: generate SVG
-        uses: cyprieng/github-breakout@v1
+      - name: Generate SVG
+        uses: cyprieng/github-breakout@v1.2.1
         with:
           github_username: ${{ github.repository_owner }}
 
@@ -32,12 +32,24 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
 
-      - name: Commit and force-push SVGs to target branch
+      - name: Commit SVGs to branch
         run: |
           git checkout --orphan github-breakout
           git rm -rf .
           mkdir images
           mv /tmp/breakout-images/* images/
           git add images
-          git commit -m "chore: update GitHub breakout SVGs" || echo "No changes to commit"
+          git commit -m "chore: update GitHub breakout SVGs" || echo "No changes"
           git push --force origin github-breakout
+
+      - name: Checkout main branch
+        uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - name: Update README.md
+        run: |
+          sed -i '/<!-- breakout-start -->/,/<!-- breakout-end -->/c\<!-- breakout-start -->\n<p align="center">\n  <img src="https://raw.githubusercontent.com/${{ github.repository }}/github-breakout/images/breakout-light.svg#gh-light-mode-only" alt="Breakout Game"/>\n  <img src="https://raw.githubusercontent.com/${{ github.repository }}/github-breakout/images/breakout-dark.svg#gh-dark-mode-only" alt="Breakout Game"/>\n</p>\n<!-- breakout-end -->' README.md
+          git add README.md
+          git commit -m "chore: update README with latest breakout game" || echo "No changes"
+          git push origin main
