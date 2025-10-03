@@ -20,6 +20,9 @@ jobs:
         uses: cyprieng/github-breakout@v1.2.1
         with:
           github_username: ${{ github.repository_owner }}
+          colors: "#FF6F61" 
+    
+    
 
       - name: Move generated SVGs to temp
         run: |
