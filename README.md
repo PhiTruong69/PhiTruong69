@@ -15,6 +15,7 @@ a student from HCMUT
 [![](https://visitcount.itsvg.in/api?id=PhiTruong69&icon=9&color=0)](https://visitcount.itsvg.in)
 
 <!-- Proudly created with GPRM ( https://gprm.itsvg.in ) -->
+<img width="480" height="480" alt="image" src="https://github.com/user-attachments/assets/1542a6ea-618f-46c3-bd69-a50eec95c9f1" />
 
 <!-- breakout-start -->
 <p align="center">
