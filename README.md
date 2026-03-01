@@ -1,4 +1,4 @@
-![Dance Cat](https://github.com/user-attachments/assets/ee086d72-3591-4dbc-a903-ad19ef550163)
+
 
 <!-- breakout-start -->
 <p align="center">
